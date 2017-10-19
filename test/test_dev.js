@@ -1,5 +1,6 @@
 delete require.cache[require.resolve("../bin/www")]
 process.env.NODE_ENV = "development";
+process.env.PORT = 2700
 var www = require("../bin/www");
 var request = require('request');
 var expect = require('chai').expect;
