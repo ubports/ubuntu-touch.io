@@ -3,14 +3,28 @@ extends layout
 block content
   .container(data-role='content')
     include index/splash
-  .container
-    center
-      h3 Subscribe to our newsletter to stay up to date!
-    include includes/inline-signup
-  .container
-    include index/welcome
-  //- .installer
-  //-   .container
-  //-     include index/installer
-  .container
+  .white
+    .container
+      include index/welcome
+  .orange
+    .container
+      include index/design
+  .white
+    .container
+      include index/next
+  .orange
+    .container
+      include index/base
+  .white
+    .container
+      include index/by
+  .orange
+    .container
+      include index/installer
+  .white
+    .container
+      .col-md-12.text-center 
+        h2.on-white-header What are you wating for?
+        button.btn.btn-primary.btn-xl(type="button") Get Ubuntu touch
+  //-.container
     include index/about
