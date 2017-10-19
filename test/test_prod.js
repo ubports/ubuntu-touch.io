@@ -27,4 +27,16 @@ describe("testing "+process.env.NODE_ENV, function () {
       });
     });
   });
+  describe("testing: "+url+"telegram", function () {
+    it('should return 302', function (done) {
+      request({
+        url: url+"telegram",
+        followRedirect: false,
+        maxRedirects: 0
+      }, function (err, res, body){
+        expect(res.statusCode).to.equal(302);
+        done();
+      });
+    });
+  });
 });
