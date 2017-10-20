@@ -21,27 +21,14 @@ head
     nav.navbar.navbar-default(role='navigation', data-role='header')
       .container
         .navbar-header
-          .visible-xs.visible-sm(data-role='actions')
-            button.fa.fa-bars(type='button', ng-click='opened = !opened')
-            div(data-role='actions-overflow-list', ng-class='{opened: opened}')
-              ul
-                li
-                  a(ng-click='opened = false', href='https://ubports.com') About UBports
-                li
-                  a(ng-click='opened = false', href='https://devices.ubports.com') Get Ubuntu Touch
-                li
-                  a(ng-click='opened = false', href='https://forums.ubports.com') Forums
-                li
-                  a(ng-click='opened = false', href='https://docs.ubports.com') Docs
-                li
-                  a(ng-click='opened = false', href='https://ubports.com/blog') Blog
-                li
-                  a(ng-click='opened = false', href='https://patreon.com/ubports') Donate
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+              span.sr-only Toggle navigation
+              span.fa.fa-bars
           a.navbar-brand(href='/')
             div(data-role='back-btn')
                 img.himg(src="/img/robot-t.png")
             | Ubuntu Touch
-        .navbar-collapse.navbar-right.hidden-xs.hidden-sm
+        .navbar-collapse.navbar-right.collapse(id="navbar", style="background-color: white;")
           ul.nav.navbar-nav
             li
               a(href='https://ubports.com') About UBports
@@ -62,5 +49,3 @@ head
     script(src="https://use.fontawesome.com/fd65ace675.js")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
-    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js')
-    script(src='js/root.js?v=' + deployVersion)
