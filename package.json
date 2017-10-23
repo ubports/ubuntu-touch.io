@@ -8,20 +8,19 @@
     "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
   },
   "dependencies": {
-    "body-parser": "~1.17.1",
+    "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
-    "debug": "~2.6.3",
-    "express": "~4.15.2",
-    "jade": "~1.11.0",
-    "morgan": "~1.8.1",
+    "debug": "~3.1.0",
+    "express": "~4.16.2",
+    "morgan": "~1.9.0",
     "pug": "^2.0.0-rc.1",
     "request": "^2.69.0",
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
-    "coveralls": "^2.13.0",
+    "coveralls": "^3.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "chai": "^3.5.0"
+    "mocha": "^4.0.1",
+    "chai": "^4.1.2"
   }
 }
