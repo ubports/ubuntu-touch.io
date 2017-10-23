@@ -144,6 +144,39 @@ p {
 
 .installer-img {
   height: 300px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.on-orange-text a:link {
+   color: #81D4FA;
+}
+
+.on-orange-text a:visited {
+   color: #81D4FA;
+}
+
+.on-orange-text a:hover {
+   color: #4FC3F7;
+}
+
+.on-orange-text a:active {
+   color: #4FC3F7;
+}
+
+.on-white-text a:link {
+   color: #03A9F4;
+}
+
+.on-white-text a:visited {
+   color: #03A9F4;
+}
+
+.on-white-text a:hover {
+   color: #039BE5;
+}
+
+.on-white-text a:active {
+   color: #039BE5;
 }
 
 .installer-img {
