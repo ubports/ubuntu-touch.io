@@ -1,19 +1,15 @@
 extends layout
 
 block content
-  .container(data-role='content')
-    include apps/splash
-  .orange
-    .container
-      include apps/convergence
-  .white
-    .container
-      include apps/coreapps
-  .black
-    .container
-      include apps/design
-  .white
-    .container
-      .col-md-12.text-center
-        h2.on-white-header Find more apps on the OpenStore
-        a.button.btn.btn-primary.btn-xl-black(type="button", href="https://uappexplorer.com", target="_blank") #[img(src='/img/openstore.png', width="30px", height="30px", vertical-align="center")] Ubuntu OpenStore 
+  .p-strip--image.is-light.is-deep.is-bordered(data-role='content', style="background-image: url('/img/features-intro-row.jpg');")
+    .row
+      .u-equal-height
+        .col-6.u-vertically-center
+          .p-card--overlay
+            h2 Everything you need...
+            p Ubuntu Touch comes pre-installed with a set of solid core apps that cover your daily needs.
+            p This includes everything you expect from a phone, like a dialer, contacts and calendar, but since it's GNU/Linux, the OS comes with a fully-featured file browser and terminal (with essential command-line tools) as well.
+
+  include blocks/community-apps
+  include blocks/convergence-in-mind
+  include blocks/openstore

@@ -1,28 +1,21 @@
 extends layout
 
 block content
-  .container(data-role='content')
-    include index/splash
-  .white
-    .container
-      include index/welcome
-  .orange
-    .container
-      include index/design
-  .white
-    .container
-      include index/next
-  .orange
-    .container
-      include index/base
-  .white
-    .container
-      include index/by
-  .orange
-    .container
-      include index/installer
-  .white
-    .container
-      .col-md-12.text-center
-        h2.on-white-header What are you wating for?
-        a.button.btn.btn-primary.btn-xl(type="button", href="https://devices.ubports.com", target="_blank") Get Ubuntu Touch
+  .p-strip--image.is-light.is-deep.is-bordered(data-role='content', style="background-image: url('/img/intro-row.jpg');")
+    .row
+      .col-6.u-vertically-center
+        .p-card--overlay
+          h4 A simple and beautiful mobile operating system for everyone!
+          p Ubuntu Touch is the touch-friendly mobile version of Ubuntu Linux. Originally designed and developed by Canonical, the operating system now lives on in the UBports community.
+          p
+            a.p-button--positive(href="/devices") Get Ubuntu Touch
+            | &emsp;
+            a(href="/contribute") Support our community
+
+  include blocks/welcome
+  include blocks/os-summary
+  //include blocks/convergence-ready
+  include blocks/community-driven
+  include blocks/built-on-ubuntu
+  include blocks/ubports-installer
+  include blocks/links

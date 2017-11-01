@@ -4,12 +4,10 @@ head
   meta(http-equiv='X-UA-Compatible', content='IE=edge')
   meta(name='viewport', content='width=device-width, initial-scale=1')
   meta(name='description', content='Ubuntu Touch, a simple and beautiful mobile operating system for everyone')
-  meta(name='author', content='Marius Gripsgard, Jan Sprinz')
+  meta(name='author', content='Marius Gripsgard, Jan Sprinz, Stefano Verzegnassi')
   title Ubuntu Touch
   link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
-  link(href='https://fonts.googleapis.com/css?family=Ubuntu:400,700', rel='stylesheet', type='text/css')
-  link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
-  link(href='css/ubports.css?v=' + deployVersion, rel='stylesheet')
+  link(rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.6.1.min.css")
   link(rel="icon", type="image/png", href="/img/icon.png")
   // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
   // WARNING: Respond.js doesn't work if you view the page via file://
@@ -17,32 +15,37 @@ head
     script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
     script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
   body(ng-app='ubports', ng-controller='ctrl')
-    nav.navbar.navbar-default(role='navigation', data-role='header')
-      .container
-        .navbar-header
-          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-              span.sr-only Toggle navigation
-              span.fa.fa-bars
-          a.navbar-brand(href='/')
-            div(data-role='back-btn')
-                img.himg(src="/img/robot-t.png")
-            | Ubuntu Touch
-        .navbar-collapse.navbar-right.collapse(id="navbar", style="background-color: white;")
-          ul.nav.navbar-nav
-            li
-              a(href='https://devices.ubports.com') Devices
-            li
-              a(href='/apps') Apps
-            li
-              a(href='https://ubports.com/blog') Blog
-            li
-              a(href='https://ubports.com') UBports Foundation
-            li
-              a(href='https://patreon.com/ubports') Donate
+    header.p-navigation(id="navigation")
+      .row
+        .p-navigation__banner
+          .p-navigation__logo
+            a.p-navigation__link(href='/')
+              img.p-navigation__image(src="/img/robot-t.png")
+              | &emsp;Ubuntu Touch
+          a.p-navigation__toggle--open(href="#navigation", title="menu")
+            | Menu
+          a.p-navigation__toggle--close(href="#navigation-closed", title="close menu")
+            | Close menu
+        nav.p-navigation__nav(role='menubar')
+          span.u-off-screen
+            a(href="#main-content") Jump to main content
+          ul.p-navigation__links(role='menu')            
+            li.p-navigation__link(role='menuitem')
+              a(href='/') Home        
+            li.p-navigation__link(role='menuitem')
+              a(href='/apps') Features
+            li.p-navigation__link(role='menuitem')
+              a(href='devices') Devices
+            li.p-navigation__link(role='menuitem')
+              a(href='/contribute') Contribute
+            li.p-navigation__link(role='menuitem')
+              a.p-link--external(href='https://ubports.com') UBports    
+            //li.p-navigation__link(role='menuitem')
+              a.p-link--external(href='https://ubports.com/blog/latest-news-1') Blog
+            li.p-navigation__link(role='menuitem')
+              a.p-link--external(href='https://ubports.com/page/sponsors') Donate
 
     block content
-    .container
-        include footer
+    include footer
     script(src="https://use.fontawesome.com/fd65ace675.js")
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+

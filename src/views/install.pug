@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .p-strip--dark.is-deep.is-bordered(style={background: '#E95420'}, data-role='content')
+    .row    
+      h1 Ubports Installer
+      h3 The easiest way to install Ubuntu Touch!
+      .u-equal-height
+        .col-6 
+          p You thought installing Ubuntu Touch was a painful process? Well you are wrong! With the UBports Installer, setting up Ubuntu Touch has never been easier! Just follow the on-screen instructions, sit back and watch your PC do all the work! 
+          h5 Install on Ubuntu:
+          div.p-code-snippet
+            input.p-code-snippet__input(value="sudo snap install ubports-installer --devmode", readonly="readonly")
+            button.p-code-snippet__action Copy to clipboard
+          h5 Windows, MacOS or other GNU/Linux distros:
+          p 
+            a.p-button--neutral(href="https://github.com/ubports/ubports-installer/releases/latest")
+              span.fa.fa-linux.fa-space.u-no-margin
+              | &nbsp;
+              span.fa.fa-apple.fa-space.u-no-margin
+              | &nbsp;
+              span.fa.fa-windows.fa-space.u-no-margin
+              | &emsp;Download
+            | &emsp;
+            a.p-link--inverted(href="https://github.com/ubports/ubports-installer/blob/master/README.md", target='_blank') How to install
+        .col-1
+        .col-5.u-hide--small
+          img.p-image--bordered(src="/img/ubpi.jpg")

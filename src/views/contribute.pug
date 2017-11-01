@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .p-strip--light.is-deep.is-bordered(data-role='content')
+    .row
+      .u-equal-height
+         .col-7
+           h1 Contribute
+           h3 To make this project succeed we need everybody's support.
+           p Anyone can help shape and improve Ubuntu Touch. Many of our tasks do not require special technical skills; contributions may come in many forms.
+             br 
+             | While development is one of the most important focus area, any help with marketing, quality assurance, UX design, and localization is equally appreciated!
+           p You can also contribute with a donation, which would help us to buy energy drinks to our sleepy developers!
+           p 
+            ul.u-no-margin.u-no-padding(style="list-style-type: none;")
+              li
+                a(href="https://twitter.com/home?status=Ubuntu Touch by @ubports community https://ubuntu-touch.io", target='_blank') Tweet about us!
+              li
+                a(href="#contacts") Donate
+
+         .col-1
+         .col-4.u-hide--small
+           img(src="/img/robot-t.png")
+
+
+         
+
+  include blocks/contribute-development
+  include blocks/contribute-other-groups
+  include blocks/ubports-foundation
+  include blocks/contribute-contacts
