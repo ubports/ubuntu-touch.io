@@ -1,20 +1,18 @@
-# NOTE: This website is no longer used!
-
-# ubports.com
+# ubuntu-touch.io
 [![Build Status](https://travis-ci.org/ubports/ubports.com.svg?branch=master)](https://travis-ci.org/ubports/ubports.com)
 [![Coverage Status](https://coveralls.io/repos/github/ubports/ubports.com/badge.svg?branch=master)](https://coveralls.io/github/ubports/ubports.com?branch=master)
 
-The new UBports website
+The new Ubuntu Touch website
 
 
 ## start debug server
 
 ```
 npm install
-DEBUG=ubports_main_:* npm start
+npm start
 ```
 
-Then open localhost:2700 in your browser
+Then open localhost:2706 in your browser
 
 ## Production
 
