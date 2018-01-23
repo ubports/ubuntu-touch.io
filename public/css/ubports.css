@@ -245,18 +245,22 @@ a:focus {
 }
 .wide-img {
   width: 97%;
+  min-width: 320px;
 }
 .tall-img {
   width: 45%;
+  min-width: 320px;
 }
 .square-img {
   width: 64%;
+  min-width: 320px;
 }
 .splash-img {
   width: 60%;
   margin: auto;
   display: flex;
   justify-content: center;
+  min-width: 320px;
 }
 .splash-text {
   text-align: center;

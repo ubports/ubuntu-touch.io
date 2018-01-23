@@ -17,55 +17,15 @@ head
     script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
     script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
   body(ng-app='ubports', ng-controller='ctrl')
-    //- nav.navbar.navbar-light.navbar-expand-lg.justify-content-between
-    //-   .container
-    //-     a.navbar-brand(href="/")
-    //-       .navbar-brand-button
-    //-         img.navbar-brand-image(src="/img/robot-t.png")
-    //-       | UBports
-    //-     .collapse.navbar-collapse.justify-content-end
-            ul.navbar-nav
-    //-           li.nav-item
-    //-             a.nav-link Ubuntu Touch
-    //-           li.nav-item.dropdown
-    //-             a#navbarDropdownMenuLinkss.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-    //-               | Foundation
-    //-             .dropdown-menu(aria-labelledby='navbarDropdownMenuLinkss')
-    //-               a.dropdown-item(href='#') About UBports
-    //-               a.dropdown-item(href='#') Design guidelines
-    //-               a.dropdown-item(href='#') Sponsors
-    //-               a.dropdown-item(href='#') Donate
-    //-           li.nav-item.dropdown
-    //-             a#navbarDropdownMenuLinks.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-    //-               | Community
-    //-             .dropdown-menu(aria-labelledby='navbarDropdownMenuLinks')
-    //-               a.dropdown-item(href='#') Get involved
-    //-               a.dropdown-item(href='#') Forums
-    //-               a.dropdown-item(href='#') Documentation
-    //-               a.dropdown-item(href='#') Our Github team
-    //-           li.nav-item.dropdown
-    //-             a#navbarDropdownMenuLinksss.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-    //-               | News
-    //-             .dropdown-menu(aria-labelledby='navbarDropdownMenuLinksss')
-    //-               a.dropdown-item(href='#') Blogs
-    //-               a.dropdown-item(href='#') Community updates
-    //-               a.dropdown-item(href='#') Audiocasts
-    //-               a.dropdown-item(href='#') Events
-    //-               a.dropdown-item(href='#') Community sites
-    //-           li.nav-item
-    //-             a.nav-link Get in touch
-    //-           //a.nav-item.nav-link(href='https://devices.ubports.com') Devices
-    //-           //a.nav-item.nav-link(href='/apps') Apps
-    //-           //a.nav-item.nav-link(href='https://ubports.com/blog') Blog
-    //-           //a.nav-item.nav-link(href='https://ubports.com') UBports Foundation
-    //-           //a.nav-item.nav-link(href='https://patreon.com/ubports') Donate
-    nav.navbar.navbar-light.navbar-expand-lg.justify-content-between.fixed-top
-      .container
+    nav.navbar.navbar-light.bg-white.navbar-expand-lg.justify-content-between.fixed-top
+      .container.bg-white
         a.navbar-brand(href="/")
           .navbar-brand-button
             img.navbar-brand-image(src="/img/robot-t.png")
           | Ubuntu Touch
-        .collapse.navbar-collapse.justify-content-end
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbar" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        .collapse.navbar-collapse.justify-content-end.bg-white(id="navbar")
             ul.navbar-nav
               li.nav-item
                 a.nav-link(href='/install') Get Ubuntu touch
@@ -87,6 +47,8 @@ head
                   a.dropdown-item(href='#') Nexus 5
                   a.dropdown-item(href='#') BQ m10 FHD
                   a.dropdown-item(href='#') Others...
+              li.nav-item
+                a.nav-link(href='https://ubports.com/donate') Donate
               li.nav-item
                 a.nav-link(href='https://ubports.com') UBports Foundation
 
