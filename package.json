@@ -15,7 +15,7 @@
     "express": "~4.16.2",
     "morgan": "~1.9.0",
     "pug": "^2.0.0-rc.1",
-    "request": "^2.69.0",
+    "request": "^2.83.0",
     "serve-favicon": "~2.4.2",
     "stylus": "^0.54.5"
   },
