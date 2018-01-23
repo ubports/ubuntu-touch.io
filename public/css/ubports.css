@@ -106,6 +106,16 @@ a:focus {
   padding-bottom: 50px;
   min-height: 370px;
 }
+.splash-banner {
+  color: #fff;
+  margin-top: -20px;
+  background-image: url("/img/banner-core-devices.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 700;
+  padding-top: 200px;
+  padding-bottom: 50px;
+}
 .devices2-banner {
   margin-top: -70px;
   background-image: url("/img/ubuntu-touch-devices-wide.jpeg");
@@ -117,7 +127,7 @@ a:focus {
 }
 .privacy-banner {
   margin-top: -70px;
-  background-image: url("https://188.226.166.211/web/image/1573/safe%20met%20logo%20bordA.jpg");
+  background-image: url("/img/safe-met-logo-bordA.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 50px;
@@ -129,9 +139,9 @@ a:focus {
   background-image: url("/img/ubuntu-touch-breakfast.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 60px;
+  padding-top: 130px;
   padding-bottom: 50px;
-  min-height: 430px;
+  min-height: 450px;
 }
 .fun-banner {
   margin-top: -70px;
@@ -220,16 +230,16 @@ a:focus {
   font-size: 16pt;
 }
 .on-orange-text a:link {
-  color: #81d4fa;
+  color: #000;
 }
 .on-orange-text a:visited {
-  color: #81d4fa;
+  color: #000;
 }
 .on-orange-text a:hover {
-  color: #4fc3f7;
+  color: #000;
 }
 .on-orange-text a:active {
-  color: #4fc3f7;
+  color: #000;
 }
 .on-white-text {
   margin-bottom: 20px;
