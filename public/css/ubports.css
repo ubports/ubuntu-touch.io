@@ -296,6 +296,10 @@ a:focus {
   width: 97%;
   min-width: 320px;
 }
+.medium-img {
+  width: 60%;
+  min-width: 320px;
+}
 .tall-img {
   width: 45%;
   min-width: 320px;

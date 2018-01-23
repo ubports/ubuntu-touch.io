@@ -10,11 +10,10 @@ block content
           h2 Something went wrong :(
         h1= error.status
       br
-      .panel.panel-default(ng-if="!error")
-        .panel-heading(ng-click="toggeError()") Show debug output
-      .panel.panel-default(ng-if="error")
-        .panel-heading(ng-click="toggeError()") Hide debug output
+      .panel.panel-default
+        .panel-heading Debug output
         .panel-body
           p= message
           p= error.status
           pre #{error.stack}
+      p You can visit our #[a(href='https://www.youtube.com/channel/UCDGJ7jdEoOx6_o_GbkjFaBg') YouTube-channel] to kill time while we try to fix this. Or help us by #[a(href='https://github.com/ubports/ubuntu-touch.io/issues', target='_blank') reporting a bug]!
