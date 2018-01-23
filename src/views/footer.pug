@@ -1,17 +1,24 @@
 br
-center
-  p
+.row.footer-block
+  .col-sm-4
+    p.footer-text-header(style="margin-left: 18px;") Supported by
+    img.footer-img(src="/img/UBports-Logo-Trans.png")
+  .col-sm-4.block
+    p.footer-text-header Donate
+    a.footer-link(href='https://liberapay.com/UBports/') Donate with Librepay
+    a.footer-link(href='https://www.paypal.me/ubports') Donate with PayPal
+    a.footer-link(href='https://ubports.com/foundation/sponsors') Donate with Bitcoin
+    a.footer-link(href='https://www.patreon.com/ubports') Become a Patreon!
+  .col-sm-4.block
+    p.footer-text-header Contact
+    a.footer-link(href='https://ubports.com/contact-us') Contact Form
+    a.footer-link(href='https://t.me/ubports') @Telegram
+    a.footer-link(href='https://ubports.com/apply-for-membership-form') Membership Application
+.footer-block
+  p.text-center
     | #[a(href="https://github.com/ubports/ubuntu-touch.io") Edit this page] or #[a(href="https://github.com/ubports/ubuntu-touch.io/issues") report a bug]
-  p
-    | This site is maintained by the 
-    a(href='https://ubports.com/page/website.aboutus') UBports Team
-    |  and is not an any way endorsed by or affiliated with
-    a(href='http://ubuntu.com/')  Ubuntu
-    |  or
-    a(href='http://www.canonical.com/')  Canonical
-    | .
-    a(href='http://ubuntu.com/')  Ubuntu
-    |  and
-    a(href='http://www.canonical.com/')  Canonical
-    |  are registered trademarks of
-    a(href='http://www.canonical.com/')  Canonical Ltd.
+  p.text-center
+    | This site is maintained by The #[a(href='https://ubports.com/page/website.aboutus') UBports Team] and is not an any way endorsed by or affiliated with #[a(href='http://ubuntu.com/') Ubuntu]
+    | or #[a(href='http://www.canonical.com/')] Canonical.
+    br
+    | #[a(href='http://ubuntu.com/') Ubuntu] and #[a(href='http://www.canonical.com/') Canonical] are registered trademarks of #[a(href='http://www.canonical.com/') Canonical Ltd.]

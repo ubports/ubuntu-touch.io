@@ -1,19 +1,23 @@
 extends layout
 
 block content
-  .container(data-role='content')
-    include apps/splash
+  .app-banner
+    .container(data-role='content')
+      include apps/splash
+  .white
+    .container
+     include apps/info
   .orange
     .container
       include apps/convergence
   .white
     .container
       include apps/coreapps
-  .black
+  .gray
     .container
       include apps/design
   .white
     .container
       .col-md-12.text-center
         h2.on-white-header Find more apps on the OpenStore
-        a.button.btn.btn-primary.btn-xl-black(type="button", href="https://uappexplorer.com", target="_blank") #[img(src='/img/openstore.png', width="30px", height="30px", vertical-align="center")] Ubuntu OpenStore 
+        a.button.btn.btn-primary.btn-xl-black(type="button", href="https://uappexplorer.com", target="_blank") #[img(src='/img/openstore.png', width="30px", height="30px", vertical-align="center")] Ubuntu OpenStore

@@ -8,7 +8,7 @@ head
   title Ubuntu Touch
   link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
   link(href='https://fonts.googleapis.com/css?family=Ubuntu:400,700', rel='stylesheet', type='text/css')
-  link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css", integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb", crossorigin="anonymous")
   link(href='css/ubports.css?v=' + deployVersion, rel='stylesheet')
   link(rel="icon", type="image/png", href="/img/icon.png")
   // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
@@ -17,32 +17,84 @@ head
     script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
     script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
   body(ng-app='ubports', ng-controller='ctrl')
-    nav.navbar.navbar-default(role='navigation', data-role='header')
+    //- nav.navbar.navbar-light.navbar-expand-lg.justify-content-between
+    //-   .container
+    //-     a.navbar-brand(href="/")
+    //-       .navbar-brand-button
+    //-         img.navbar-brand-image(src="/img/robot-t.png")
+    //-       | UBports
+    //-     .collapse.navbar-collapse.justify-content-end
+            ul.navbar-nav
+    //-           li.nav-item
+    //-             a.nav-link Ubuntu Touch
+    //-           li.nav-item.dropdown
+    //-             a#navbarDropdownMenuLinkss.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+    //-               | Foundation
+    //-             .dropdown-menu(aria-labelledby='navbarDropdownMenuLinkss')
+    //-               a.dropdown-item(href='#') About UBports
+    //-               a.dropdown-item(href='#') Design guidelines
+    //-               a.dropdown-item(href='#') Sponsors
+    //-               a.dropdown-item(href='#') Donate
+    //-           li.nav-item.dropdown
+    //-             a#navbarDropdownMenuLinks.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+    //-               | Community
+    //-             .dropdown-menu(aria-labelledby='navbarDropdownMenuLinks')
+    //-               a.dropdown-item(href='#') Get involved
+    //-               a.dropdown-item(href='#') Forums
+    //-               a.dropdown-item(href='#') Documentation
+    //-               a.dropdown-item(href='#') Our Github team
+    //-           li.nav-item.dropdown
+    //-             a#navbarDropdownMenuLinksss.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+    //-               | News
+    //-             .dropdown-menu(aria-labelledby='navbarDropdownMenuLinksss')
+    //-               a.dropdown-item(href='#') Blogs
+    //-               a.dropdown-item(href='#') Community updates
+    //-               a.dropdown-item(href='#') Audiocasts
+    //-               a.dropdown-item(href='#') Events
+    //-               a.dropdown-item(href='#') Community sites
+    //-           li.nav-item
+    //-             a.nav-link Get in touch
+    //-           //a.nav-item.nav-link(href='https://devices.ubports.com') Devices
+    //-           //a.nav-item.nav-link(href='/apps') Apps
+    //-           //a.nav-item.nav-link(href='https://ubports.com/blog') Blog
+    //-           //a.nav-item.nav-link(href='https://ubports.com') UBports Foundation
+    //-           //a.nav-item.nav-link(href='https://patreon.com/ubports') Donate
+    nav.navbar.navbar-light.navbar-expand-lg.justify-content-between.fixed-top
       .container
-        .navbar-header
-          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-              span.sr-only Toggle navigation
-              span.fa.fa-bars
-          a.navbar-brand(href='/')
-            div(data-role='back-btn')
-                img.himg(src="/img/robot-t.png")
-            | Ubuntu Touch
-        .navbar-collapse.navbar-right.collapse(id="navbar", style="background-color: white;")
-          ul.nav.navbar-nav
-            li
-              a(href='https://devices.ubports.com') Devices
-            li
-              a(href='/apps') Apps
-            li
-              a(href='https://ubports.com/blog') Blog
-            li
-              a(href='https://ubports.com') UBports Foundation
-            li
-              a(href='https://patreon.com/ubports') Donate
+        a.navbar-brand(href="/")
+          .navbar-brand-button
+            img.navbar-brand-image(src="/img/robot-t.png")
+          | Ubuntu Touch
+        .collapse.navbar-collapse.justify-content-end
+            ul.navbar-nav
+              li.nav-item
+                a.nav-link(href='/install') Get Ubuntu touch
+              li.nav-item.dropdown
+                a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  | Features
+                .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                  a.dropdown-item(href='/features') Overview
+                  a.dropdown-item(href='/apps') Apps
+                  a.dropdown-item(href='#') Privicy
+                  a.dropdown-item(href='#') Convergence
+                  a.dropdown-item(href='#') Design
+              li.nav-item.dropdown
+                a#navbarDropdownMenuLin.nav-link.dropdown-toggle(href='/apps', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  | Devices
+                .dropdown-menu(aria-labelledby='navbarDropdownMenuLin')
+                  a.dropdown-item(href='#') Fairphone 2
+                  a.dropdown-item(href='#') OnePlus One
+                  a.dropdown-item(href='#') Nexus 5
+                  a.dropdown-item(href='#') BQ m10 FHD
+                  a.dropdown-item(href='#') Others...
+              li.nav-item
+                a.nav-link(href='https://ubports.com') UBports Foundation
 
     block content
-    .container
+    .light-grey
+      .container
         include footer
     script(src="https://use.fontawesome.com/fd65ace675.js")
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js", integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js", integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh", crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js", integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ", crossorigin="anonymous")
