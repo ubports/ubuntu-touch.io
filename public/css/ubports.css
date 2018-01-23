@@ -7,6 +7,8 @@ body {
   font-family: "Ubuntu", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal;
   color: #787878;
+}
+.content {
   margin-top: 70px;
 }
 a {
@@ -59,9 +61,8 @@ a:focus {
   -moz-border-radius: 8px;
   border-radius: 8px;
 }
-.navbar {
+.unavbar {
   background: #fff;
-  height: 50px;
   border-bottom: 1px solid rgba(0,0,0,0.1);
   padding-top: 2px;
   color: #777 !important;
@@ -85,6 +86,7 @@ a:focus {
   height: 40px;
   margin-top: -3px;
   margin-left: 5px;
+  z-index: 100;
 }
 .app-banner {
   margin-top: -70px;
