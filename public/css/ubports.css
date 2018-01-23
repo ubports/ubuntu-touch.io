@@ -113,6 +113,15 @@ a:focus {
   padding-bottom: 50px;
   min-height: 370px;
 }
+.design-banner {
+  margin-top: -70px;
+  background-image: url("/img/ubuntu-touch-breakfast.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 370px;
+}
 .banner-text {
   margin-top: 40px;
 }
