@@ -1,25 +1,18 @@
-extends layout
+extends components/layout
 
 block content
   .splash-banner
     .container
       .background-shadow
-        include index/splash
+        h1.splash-text Ubuntu Touch
+        h4(style="text-align: center; color: white") #[a(href='https://ubports.com', target='_blank', style='color: white') Provided by the UBports community]
+        h3.text-center A simple and beautiful mobile operating system for everyone!
   .white
     .container
       include index/welcome
-  .orange
-    .container
-      include index/design
   .white
     .container
-      include index/next
-  .orange
-    .container
-      include index/base
-  .white
-    .container
-      include index/by
+      include index/team
   .orange
     .container
       include index/installer

@@ -1,10 +1,12 @@
-extends layout
+extends components/layout
 
 block content
   .design-banner
     .container(data-role='content')
       .background-shadow
-        include design/splash
+        .banner-text
+          h1.splash-text.text-shadow(style="color: white;") Design
+          h3.text-center.text-shadow(style="color: white;") Beautiful
   .orange(style="margin-top: 0")
     .container
       include install/easy
