@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .container
+    include devices/list
+
+  script(src="https://cdn.jsdelivr.net/npm/vue")
+  script(src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5")
+  script(src="/js/devices/api.js")
+  script(src="/js/devices/list.js")

@@ -1,0 +1,57 @@
+.card
+    .card-header.orange-background Core Devices
+    div(style="padding: .75rem 1.25rem;")
+      p(style="margin-bottom: 0") Core Devices are the Devices that will recieve all the new features, critical security-updates and bug-fixes from UBports. These devices will soon be rebased on Ubuntu 16.04 LTS. Until then, the existing legacy image (based on 15.04) can be installed.
+    table.table.table-hover
+      thead
+        tr
+          th Name
+          th Device
+          th Comment
+          th(style='width: 3%;')
+      tbody(id="coreList")
+        tr(v-for='device in devices', style='')
+          td {{device.name}}
+          td {{device.device}}
+          td(style='width: 45%; max-width: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;')
+          td
+            span.fa.fa-chevron-right.pull-right
+
+.card(style="margin-top: 20px")
+    .card-header.orange-background Legacy Devices
+    div(style="padding: .75rem 1.25rem;")
+      p(style="margin-bottom: 0") Legacy Devices are devices that will only get critical security-updates and bug-fixes. New features might appear from time to time, but the focus is on the core devices listed above. Pull-requests from the community are accepted and will be merged into the images.
+    table.table.table-hover
+      thead
+        tr
+          th Name
+          th Device
+          th Comment
+          th(style='width: 3%;')
+      tbody(id="legList")
+        tr(v-for='device in devices', style='')
+          td {{device.name}}
+          td {{device.device}}
+          td(style='width: 45%; max-width: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;')
+          td
+            span.fa.fa-chevron-right.pull-right
+
+
+.card(style="margin-top: 20px")
+    .card-header.orange-background Community Devices
+    div(style="padding: .75rem 1.25rem;")
+      p(style="margin-bottom: 0") Community devices
+    table.table.table-hover
+      thead
+        tr
+          th Name
+          th Device
+          th Comment
+          th(style='width: 3%;')
+      tbody(id="communetyList")
+        tr(v-for='device in devices', style='')
+          td {{device.name}}
+          td {{device.device}}
+          td(style='width: 45%; max-width: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;')
+          td
+            span.fa.fa-chevron-right.pull-right

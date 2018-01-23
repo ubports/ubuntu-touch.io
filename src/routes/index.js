@@ -30,6 +30,10 @@ router.get('/privacy', function(req, res, next) {
   res.render('privacy')
 })
 
+router.get('/devices', function(req, res, next) {
+  res.render('devices')
+})
+
 router.get('/telegram', function(req, res, next) {
   res.redirect("https://telegram.me/ubports");
 });
