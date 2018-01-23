@@ -173,6 +173,10 @@ a:focus {
   background-repeat: no-repeat;
   color: #fff;
 }
+.device-header {
+  font-size: 36px;
+  color: #787878;
+}
 .white {
   margin-top: 30px;
   background-color: #fff;
@@ -267,7 +271,7 @@ a:focus {
 .on-white-text a:active {
   color: #e95420;
 }
-.fa-space {
+.fab-space {
   margin-left: 4px;
 }
 .footer-img {
