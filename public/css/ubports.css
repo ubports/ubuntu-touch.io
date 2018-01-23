@@ -97,15 +97,6 @@ a:focus {
   padding-bottom: 50px;
   min-height: 370px;
 }
-.devices-banner {
-  margin-top: -70px;
-  background-image: url("/img/banner-core-devices.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  min-height: 370px;
-}
 .splash-banner {
   color: #fff;
   margin-top: -20px;
@@ -116,7 +107,7 @@ a:focus {
   padding-top: 200px;
   padding-bottom: 50px;
 }
-.devices2-banner {
+.devices-banner {
   margin-top: -70px;
   background-image: url("/img/ubuntu-touch-devices-wide.jpeg");
   background-size: cover;
