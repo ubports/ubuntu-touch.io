@@ -4,19 +4,24 @@ block content
   .app-banner
     .container
       .background-shadow
-        include apps/splash
+        .banner-text
+          h1.splash-text.text-shadow(style="color: white;") Everything you need...
+          h3.text-center.text-shadow(style="color: white;") ...and so much more!
   .white
     .container
-     include apps/info
+      include apps/coreapps
   .orange
     .container
       include apps/convergence
   .white
     .container
-      include apps/coreapps
+      include apps/unav
   .gray
     .container
       include apps/design
+  .white
+    .container
+      include apps/dekko
   .white
     .container
       .col-md-12.text-center
