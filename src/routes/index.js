@@ -18,6 +18,18 @@ router.get('/install', function(req, res, next) {
   res.render('install')
 })
 
+router.get('/convergence', function(req, res, next) {
+  res.render('convergence')
+})
+
+router.get('/design', function(req, res, next) {
+  res.render('design')
+})
+
+router.get('/privacy', function(req, res, next) {
+  res.render('privacy')
+})
+
 router.get('/telegram', function(req, res, next) {
   res.redirect("https://telegram.me/ubports");
 });

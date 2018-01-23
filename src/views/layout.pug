@@ -68,9 +68,16 @@ head
         .collapse.navbar-collapse.justify-content-end
             ul.navbar-nav
               li.nav-item
-                a.nav-link(href='/features') Features
-              li.nav-item
-                a.nav-link(href='/apps') Apps
+                a.nav-link(href='/install') Get Ubuntu touch
+              li.nav-item.dropdown
+                a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  | Features
+                .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                  a.dropdown-item(href='/features') Overview
+                  a.dropdown-item(href='/apps') Apps
+                  a.dropdown-item(href='/privacy') Privacy
+                  a.dropdown-item(href='/convergence') Convergence
+                  a.dropdown-item(href='/design') Design
               li.nav-item.dropdown
                 a#navbarDropdownMenuLin.nav-link.dropdown-toggle(href='/apps', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
                   | Devices
@@ -80,10 +87,6 @@ head
                   a.dropdown-item(href='#') Nexus 5
                   a.dropdown-item(href='#') BQ m10 FHD
                   a.dropdown-item(href='#') Others...
-              li.nav-item
-                a.nav-link(href='/install') Get Ubuntu Touch
-              li.nav-item
-                a.nav-link(href='https://ubports.com/donate') Donate
               li.nav-item
                 a.nav-link(href='https://ubports.com') UBports Foundation
 

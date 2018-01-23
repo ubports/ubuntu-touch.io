@@ -104,11 +104,17 @@ a:focus {
   padding-bottom: 50px;
   min-height: 370px;
 }
+.privacy-banner {
+  margin-top: -70px;
+  background-image: url("http://188.226.166.211/web/image/1573/safe%20met%20logo%20bordA.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 370px;
+}
 .banner-text {
   margin-top: 40px;
-}
-.text-shadow {
-  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .orange {
   margin-top: 30px;
