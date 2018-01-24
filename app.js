@@ -1,15 +1,15 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var stylus = require('stylus');
-var cors = require('cors');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const stylus = require('stylus');
+const cors = require('cors');
+const cluster = require("cluster");
 
-var routes = require('./src/routes/index');
-
-var app = express();
+const routes = require('./src/routes/index');
+const app = express();
 
 app.locals.deployVersion = (new Date).getTime();
 
@@ -23,6 +23,12 @@ app.use(cookieParser());
 app.use(cors());
 app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 864000000}));
+
+if (process.env.DEBUG) {
+  routes.get('/debug', function(req, res, next) {
+    res.send("Worked id "+cluster.worker.id);
+  })
+}
 
 app.use('/', routes);
 
