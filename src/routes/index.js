@@ -65,19 +65,28 @@ const getDevice = (device) => {
         'User-Agent': 'client request: server ubuntu-touch.io'
       }
     }, (err, res, body) => {
+
+      // Device not found, send reject!
+      if(res.statusCode === 404)
+        return reject();
+
       // If we hit an error, try using cache!
-      if (err) {
-        if(res.statusCode === 404)
-          reject();
-        else
-          resolve(cache[device].data)
-        return;
-      }
+      if (err)
+        return resolve(cache[device].data);
       resolve(body);
+
       // 3 munutes cache!
       cache[device].expire = time()+180;
       cache[device].data = body;
     });
+  });
+}
+
+function notFound(res) {
+  res.status(404);
+  res.render('error', {
+    message: "Device not found",
+    error: {status: 404}
   });
 }
 
@@ -123,7 +132,7 @@ router.get('/api/device/:device', function(req, res, next) {
 })
 
 router.get('/device/:device', function(req, res, next) {
-  getDevice(req.params.device).then(r => res.render('device', { data: r })).catch(() => res.send(404));
+  getDevice(req.params.device).then(r => res.render('device', { data: r })).catch(() => notFound(res));
 })
 
 router.get('/telegram', function(req, res, next) {
