@@ -7,6 +7,9 @@ var coreList = new Vue({
     this.get();
   },
   methods: {
+    go: function(device) {
+      window.location.href = '/device/'+device;
+    },
     get: function() {
       get.devices(this).then(function(response) {
         console.log(response.body.devices.active)
@@ -25,6 +28,9 @@ var coreList = new Vue({
     this.get();
   },
   methods: {
+    go: function(device) {
+      window.location.href = '/device/'+device;
+    },
     get: function() {
       get.devices(this).then(function(response) {
         console.log(response.body.devices.vote)
@@ -43,6 +49,9 @@ var coreList = new Vue({
     this.get();
   },
   methods: {
+    go: function(device) {
+      window.location.href = '/device/'+device;
+    },
     get: function() {
       get.devices(this).then(function(response) {
         console.log(response.body.devices.progress)

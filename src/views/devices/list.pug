@@ -10,12 +10,12 @@
           th Comment
           th(style='width: 3%;')
       tbody(id="coreList")
-        tr(v-for='device in devices', style='')
+        tr(v-for='device in devices', style='', v-on:click="go(device.device)")
           td {{device.name}}
           td {{device.device}}
-          td(style='width: 45%; max-width: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;')
+          td(style='width: 45%; max-width: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;') {{device.comment}}
           td
-            span.fab.fa-chevron-right.pull-right
+            span.fas.fa-chevron-right.pull-right
 
 .card(style="margin-top: 20px")
     .card-header.orange-background Legacy Devices
@@ -29,12 +29,12 @@
           th Comment
           th(style='width: 3%;')
       tbody(id="legList")
-        tr(v-for='device in devices', style='')
+        tr(v-for='device in devices', style='', v-on:click="go(device.device)")
           td {{device.name}}
           td {{device.device}}
-          td(style='width: 45%; max-width: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;')
+          td(style='width: 45%; max-width: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;') {{device.comment}}
           td
-            span.fab.fa-chevron-right.pull-right
+            span.fas.fa-chevron-right.pull-right
 
 
 .card(style="margin-top: 20px")
@@ -49,9 +49,9 @@
           th Comment
           th(style='width: 3%;')
       tbody(id="communetyList")
-        tr(v-for='device in devices', style='')
+        tr(v-for='device in devices', style='', v-on:click="go(device.device)")
           td {{device.name}}
           td {{device.device}}
-          td(style='width: 45%; max-width: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;')
+          td(style='width: 45%; max-width: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;') {{device.comment}}
           td
-            span.fab.fa-chevron-right.pull-right
+            span.fas.fa-chevron-right.pull-right
