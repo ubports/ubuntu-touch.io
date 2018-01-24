@@ -113,7 +113,7 @@ a:focus {
 }
 .devices-banner {
   margin-top: -70px;
-  background-image: url("/img/banner-core-devices.jpg");
+  background-image: url("/img/banners/banner-core-devices.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 50px;
@@ -123,7 +123,7 @@ a:focus {
 .splash-banner {
   color: #fff;
   margin-top: -20px;
-  background-image: url("/img/banner-core-devices.jpg");
+  background-image: url("/img/banners/banner-core-devices.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 700;
@@ -132,7 +132,7 @@ a:focus {
 }
 .devices-banner {
   margin-top: -70px;
-  background-image: url("/img/ubuntu-touch-devices-wide.jpeg");
+  background-image: url("/img/banners/ubuntu-touch-devices-wide.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 50px;
@@ -141,7 +141,7 @@ a:focus {
 }
 .privacy-banner {
   margin-top: -70px;
-  background-image: url("/img/safe-met-logo-bordA.jpg");
+  background-image: url("/img/banners/safe-met-logo-bordA.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 50px;
@@ -150,7 +150,7 @@ a:focus {
 }
 .design-banner {
   margin-top: -150px;
-  background-image: url("/img/ubuntu-touch-breakfast.jpg");
+  background-image: url("/img/banners/ubuntu-touch-breakfast.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 130px;
@@ -159,7 +159,7 @@ a:focus {
 }
 .fun-banner {
   margin-top: -70px;
-  background-image: url("/img/fairphone-2-ubuntu-touch-wide.jpg");
+  background-image: url("/img/banners/fairphone-2-ubuntu-touch-wide.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 50px;
