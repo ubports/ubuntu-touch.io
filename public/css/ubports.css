@@ -51,8 +51,21 @@ a:focus {
   -moz-border-radius: 8px;
   border-radius: 8px;
 }
-.btn-xl-black {
+.btn-xl-black,
+.btn-xl-black:visited {
   background-color: #000;
+  border-color: #000;
+  padding: 18px 28px;
+  font-size: 20px;
+  line-height: normal;
+}
+.btn-xl-black:hover,
+.btn-xl-black:focus,
+.btn-xl-black:active,
+.btn-xl-black:active:focus,
+.btn-xl-black.active {
+  background-color: #e95420;
+  color: #fff;
   border-color: #000;
   padding: 18px 28px;
   font-size: 20px;
@@ -292,6 +305,14 @@ a:focus {
 }
 .shadow {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.ubuntu-icon {
+  border: none;
+  dusplay: block;
+  margin: auto;
+  background: center, no-repeat;
+  background-image: none;
+  background-size: cover;
 }
 .wide-img {
   width: 97%;
