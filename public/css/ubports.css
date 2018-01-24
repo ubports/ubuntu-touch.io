@@ -53,23 +53,26 @@ a:focus {
 }
 .btn-xl-black,
 .btn-xl-black:visited {
-  background-color: #000;
-  border-color: #000;
-  padding: 18px 28px;
-  font-size: 20px;
-  line-height: normal;
+  background-color: #000 !important;
+  border-color: #000 !important;
 }
 .btn-xl-black:hover,
 .btn-xl-black:focus,
-.btn-xl-black:active,
-.btn-xl-black:active:focus,
-.btn-xl-black.active {
+.btn-xl-black:active {
+  background-color: #e95420 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+}
+.btn-primary,
+.btn-primary:visited {
   background-color: #e95420;
-  color: #fff;
   border-color: #000;
-  padding: 18px 28px;
-  font-size: 20px;
-  line-height: normal;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #ac3911;
+  border-color: #000;
 }
 .unavbar {
   background: #fff;
