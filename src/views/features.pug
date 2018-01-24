@@ -1,12 +1,50 @@
 extends components/layout
 
 block content
-  .white
+  .dailyuse-banner
+    .container
+      .background-shadow
+        .banner-text
+          h1.splash-text.text-shadow(style="color: white;") Beautiful, free#[br] and open-source
+          h3.text-center.text-shadow(style="color: white;") Ubuntu for phones and tablets
+  .white(style="margin-top: 0px")
     .container
       .col-md-12.text-center
-        h2.on-white-header A Mobile Version of the Ubuntu Operating System
-          p.on-white-text
-            | Ubuntu Touch is made and maintained by the #[a(href='https://ubports.com') UBports Community], a group of volunteers and passionate people from all around the world. With Ubuntu Touch we offer a truly unique mobile experience - an alternative to the current most popular operating systems on the market. We believe that everyone is free to use, study, share and improve all software created by the foundation without restrictions. Whenever possible, everything is distributed under free and open source licenses endorsed by the Free Software Foundation and the Open Source Initiative.
-          img.item-center.installer-img.img-rounded(src="http://188.226.166.211/web/image/1535")
-          p.on-white-text
-            | Ubuntu Touch is a mobile version of the Ubuntu operating system for mobile devices. However, unlike other 'flavors' of Ubuntu such as Mate, Budgie and Gnome, it is more accurately an extract of parts of Ubuntu. It is adapted to run naturally in a mobile, touch-screen environment but is also capable of functioning as a desktop computer while in "desktop mode". This aforementioned converging of environments from device to device is where the term "Convergence" originates. You can find more technical details on our github page.
+        h2.on-white-header Mobile Version of the Ubuntu Operating System
+          p.on-white-text(style="margin-top: 20px")
+            | Ubuntu Touch is made and maintained by the #[a(href='https://ubports.com') UBports Community], a group of volunteers and passionate people from all around the world. We believe that everyone should be free to use, study, share and improve all of our software without restrictions. Every line of source-code we create is distributed under free and open source software licenses endorsed by the #[a(href='https://www.fsf.org/', target='_blank') Free Software Foundation] or the #[a(href='https://opensource.org/', target='_blank') Open Source Initiative].
+  .orange(style="margin-top: -30px")
+    .container
+      .col-md-12
+        p.on-orange-text
+          | With Ubuntu Touch we offer a truly unique mobile experience - a viable alternative to Android and iOS and also the only free and open source GNU/Linux-based mobile operating system that you can install and use today. On this page, you will learn what Ubuntu Touch can do, and if it's the right choice for your personal needs.
+  .white(style="margin-top: -30px")
+    .container
+      include features/design
+  .orange
+    .container
+      include features/free-software
+  .white
+    .container
+      include features/open-source
+  .orange
+    .container
+      include features/for-everyone
+  .white
+    .container
+      include features/convergence
+  .privacy-banner(style="margin-top: 30px")
+    .privacy-banner
+      include features/privacy
+  .white
+    .container
+      include features/apps
+  .orange
+    .container
+      include features/base
+  .white
+    .container
+      include features/community-driven
+  .orange(style="margin-bottom: -26px")
+    .container
+    include features/installer
