@@ -15,7 +15,14 @@ block content
       include convergence/compatibility
   .white
     .container
-      include convergence/responsiveness
+      .row(style="margin-top: 10px")
+        img.item-center.wide-img(src='/img/convergence.svg')
   .orange
     .container
       p.on-orange-text.item-center Please note that convergence-mode and X11-support are experimental features that can not yet fully replace your computer!
+  .white
+    .container
+      include convergence/keyboard
+  .orange
+    .container
+      include convergence/responsiveness
