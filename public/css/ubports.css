@@ -120,7 +120,7 @@ a:focus {
   min-height: 370px;
 }
 .background-shadow {
-  background-color: rgba(0,0,0,0.35);
+  background-color: rgba(0,0,0,0.65);
   padding-bottom: 10px;
 }
 .devices-banner {
