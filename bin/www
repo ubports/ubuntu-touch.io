@@ -7,6 +7,10 @@
 const debug = require('debug')('ubports_main_:server');
 const cluster = require("cluster");
 
+if (process.env.NODE_ENV !== 'production') {
+  console.log("NOTE: we are running in debug mode!");
+}
+
 // Normalize a port into a number, string, or false.
 function normalizePort(val) {
   var port = parseInt(val, 10);
@@ -74,8 +78,12 @@ if(cluster.isMaster) {
 
     cluster.on('exit', function(worker, code, signal) {
         console.log('Worker ' + worker.process.pid + ' died with code: ' + code + ', and signal: ' + signal);
-        console.log('Starting a new worker');
-        cluster.fork();
+        if (process.env.NODE_ENV !== 'production') {
+          console.log("Not running in production mode, will not spawn new worker");
+        } else {
+          console.log('Starting a new worker');
+          cluster.fork();
+        }
     });
 
     process.on("SIGUSR2", function() {
