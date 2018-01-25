@@ -26,7 +26,8 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 
-
+# Ignore CSS, since that's automatically generated
+public/css/*.css
 
 # Created by https://www.gitignore.io/api/windows,linux,osx,phpstorm,node
 
