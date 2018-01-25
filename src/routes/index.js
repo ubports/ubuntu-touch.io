@@ -1,8 +1,11 @@
 const express = require('express');
 const request = require('request');
 const router = express.Router();
+const MarkdownIt = require('markdown-it');
+const md = new MarkdownIt();
 
 const time = () => Math.floor(new Date() / 1000)
+const BASE_URL = "http://localhost:3001/v1/"
 
 var cache = {
   devices: {expire:0}
@@ -24,7 +27,7 @@ const getDevices = () => {
     console.log("get new");
     request({
       method: "get",
-      url: "https://devices.ubports.com/api/devices",
+      url: BASE_URL+"devices",
       json: true,
       headers: {
         'User-Agent': 'client request: server ubuntu-touch.io'
@@ -59,7 +62,7 @@ const getDevice = (device) => {
     console.log("get new");
     request({
       method: "get",
-      url: "https://devices.ubports.com/api/device/"+device,
+      url: BASE_URL+"devices/"+device,
       json: true,
       headers: {
         'User-Agent': 'client request: server ubuntu-touch.io'
@@ -73,6 +76,10 @@ const getDevice = (device) => {
       // If we hit an error, try using cache!
       if (err)
         return resolve(cache[device].data);
+
+      if (body.about)
+        body.about = md.render(body.about);
+
       resolve(body);
 
       // 3 munutes cache!
