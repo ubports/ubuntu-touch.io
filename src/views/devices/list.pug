@@ -18,26 +18,6 @@
             span.fas.fa-chevron-right.pull-right
 
 .card(style="margin-top: 20px")
-    .card-header.orange-background Legacy Devices
-    div(style="padding: .75rem 1.25rem;")
-      p(style="margin-bottom: 0") Legacy Devices are devices that will only get critical security-updates and bug-fixes. New features might appear from time to time, but the focus is on the core devices listed above. Pull-requests from the community are accepted and will be merged into the images.
-    table.table.table-hover
-      thead
-        tr
-          th Name
-          th Device
-          th Comment
-          th(style='width: 3%;')
-      tbody(id="legList")
-        tr(v-for='device in devices', style='', v-on:click="go(device.device)")
-          td {{device.name}}
-          td {{device.device}}
-          td(style='width: 45%; max-width: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;') {{device.comment}}
-          td
-            span.fas.fa-chevron-right.pull-right
-
-
-.card(style="margin-top: 20px")
     .card-header.orange-background Community Devices
     div(style="padding: .75rem 1.25rem;")
       p(style="margin-bottom: 0") Community devices

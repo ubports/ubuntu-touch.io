@@ -12,14 +12,14 @@ var coreList = new Vue({
     },
     get: function() {
       get.devices(this).then(function(response) {
-        console.log(response.body.devices.active)
-        this.devices = response.body.devices.active;
+        console.log(response.body)
+        this.devices = response.body;
       });
     }
   }
 })
 
-var coreList = new Vue({
+var communityList = new Vue({
   el: '#communetyList',
   data: {
     devices: [{}]
@@ -32,30 +32,9 @@ var coreList = new Vue({
       window.location.href = '/device/'+device;
     },
     get: function() {
-      get.devices(this).then(function(response) {
-        console.log(response.body.devices.vote)
-        this.devices = response.body.devices.vote;
-      });
-    }
-  }
-})
-
-var coreList = new Vue({
-  el: '#legList',
-  data: {
-    devices: [{}]
-  },
-  created: function() {
-    this.get();
-  },
-  methods: {
-    go: function(device) {
-      window.location.href = '/device/'+device;
-    },
-    get: function() {
-      get.devices(this).then(function(response) {
-        console.log(response.body.devices.progress)
-        this.devices = response.body.devices.progress;
+      get.communityCevices(this).then(function(response) {
+        console.log(response.body)
+        this.devices = response.body;
       });
     }
   }
