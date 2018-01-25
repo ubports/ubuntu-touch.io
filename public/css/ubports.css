@@ -178,6 +178,16 @@ a:focus {
   padding-bottom: 50px;
   min-height: 450px;
 }
+.everywhere-banner {
+  margin-top: -150px;
+  background-image: url("/img/banners/ubuntu-everywhere.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 130px;
+  padding-bottom: 50px;
+  min-height: 450px;
+  background-position: right;
+}
 .fun-banner {
   margin-top: -70px;
   background-image: url("/img/banners/fairphone-2-ubuntu-touch-wide.jpg");

@@ -4,10 +4,18 @@ block content
   .privacy-banner
     .container(data-role='content')
       .background-shadow
-        include privacy/splash
-  .orange(style="margin-top: 0")
-    .container
-      include privacy/intro
+        .banner-text
+          h1.splash-text.text-shadow(style="color: white;") Privacy
+          h3.text-center.text-shadow(style="color: white;") Ubuntu touch values your privacy!
   .white
     .container
+      include privacy/intro
+  .gray
+    .container
       include privacy/no-backdoors
+  .white
+    .container
+      include privacy/independent
+  .orange
+    .container
+      p.on-orange-text.item-center Compute like no one is watching - because now they can't!

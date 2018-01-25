@@ -1,18 +1,21 @@
 extends components/layout
 
 block content
-  .privacy-banner
+  .everywhere-banner
     .container(data-role='content')
       .background-shadow
         .banner-text
           h1.splash-text.text-shadow(style="color: white;") Convergence
-          h3.text-center.text-shadow(style="color: white;") Transform your phone to fullscreen desktop
-  .orange(style="margin-top: 0")
-    .container
-      include install/easy
+          h3.text-center.text-shadow(style="color: white;") Experience the future of computing!
   .white
     .container
-      include install/install-on-your
+      include convergence/intro
+  .gray
+    .container
+      include convergence/compatibility
   .white
     .container
-      include install/help
+      include convergence/responsiveness
+  .orange
+    .container
+      p.on-orange-text.item-center Please note that convergence-mode and X11-support are experimental features that can not yet fully replace your computer!
