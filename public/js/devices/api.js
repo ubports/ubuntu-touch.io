@@ -1,4 +1,4 @@
-var BASE_URL = "http://localhost:3001/v1/"
+var BASE_URL = "https://api.ubports.com/v1/"
 
 var get = {
   devices: function(t) {

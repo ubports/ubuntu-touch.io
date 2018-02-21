@@ -5,7 +5,7 @@ const MarkdownIt = require('markdown-it');
 const md = new MarkdownIt();
 
 const time = () => Math.floor(new Date() / 1000)
-const BASE_URL = "http://localhost:3001/v1/"
+const BASE_URL = "https://api.ubports.com/v1/"
 
 var cache = {
   devices: {expire:0}
