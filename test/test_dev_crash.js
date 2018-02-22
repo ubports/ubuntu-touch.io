@@ -1,14 +1,22 @@
-delete require.cache[require.resolve("../bin/www")]
+delete require.cache[require.resolve("../server.js")]
 delete require.cache[require.resolve("../app.js")]
 delete require.cache[require.resolve("../src/routes/index.js")]
-process.env.NODE_ENV = "development";
-process.env.SIMULATE_CRASH = "true"
-process.env.PORT = 2703
-var www = require("../bin/www");
+var www = require("../server");
 var request = require('request');
 var expect = require('chai').expect;
 
+console.log(3)
+
 var url = 'http://localhost:2703/crash';
+var server;
+
+before((ok) => {
+  process.env.NODE_ENV = "development";
+  process.env.SIMULATE_CRASH = "true"
+  process.env.PORT = 2703
+  process.env.CPUS = 1
+  server = www.run(ok);
+})
 
 describe("testing "+process.env.NODE_ENV, function () {
     describe("testing: "+url, function () {
@@ -19,4 +27,8 @@ describe("testing "+process.env.NODE_ENV, function () {
         });
       });
     });
+});
+
+after((done) => {
+  server.close(done);
 });

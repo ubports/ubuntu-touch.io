@@ -1,13 +1,21 @@
-delete require.cache[require.resolve("../bin/www")]
-process.env.NODE_ENV = "development";
-process.env.PORT = 2700
-var www = require("../bin/www");
+delete require.cache[require.resolve("../server.js")]
+var www = require("../server");
 var request = require('request');
 var expect = require('chai').expect;
 
 var url = 'http://localhost:2700/';
-var pages = ['']
+var pages = ["", "apps", "features", "install", "convergence",
+             "design", "privacy", "devices", "telegram"]
+var server;
 
+console.log(4)
+
+before((ok) => {
+  process.env.NODE_ENV = "development";
+  process.env.PORT = 2700
+  process.env.CPUS = 1
+  server = www.run(ok);
+})
 
 describe("testing "+process.env.NODE_ENV, function () {
   pages.forEach(function (page) {
@@ -38,4 +46,8 @@ describe("testing "+process.env.NODE_ENV, function () {
       });
     });
   });
+});
+
+after((done) => {
+  server.close(done);
 });
