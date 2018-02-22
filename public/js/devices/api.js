@@ -5,6 +5,6 @@ var get = {
     return t.$http.get(BASE_URL + "devices")
   },
   communityCevices: function(t) {
-    return t.$http.get(BASE_URL + "community/devices")
+    return t.$http.get(BASE_URL + "devices/community")
   },
 }
