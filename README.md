@@ -1,6 +1,6 @@
 # ubuntu-touch.io
-[![Build Status](https://travis-ci.org/ubports/ubports.com.svg?branch=master)](https://travis-ci.org/ubports/ubports.com)
-[![Coverage Status](https://coveralls.io/repos/github/ubports/ubports.com/badge.svg?branch=master)](https://coveralls.io/github/ubports/ubports.com?branch=master)
+[![Build Status](https://travis-ci.org/ubports/ubuntu-touch.io.svg?branch=master)](https://travis-ci.org/ubports/ubuntu-touch.io)
+[![Coverage Status](https://coveralls.io/repos/github/ubports/ubuntu-touch.io/badge.svg?branch=master)](https://coveralls.io/github/ubports/ubuntu-touch.io?branch=master)
 
 The new Ubuntu Touch website
 
