@@ -127,7 +127,7 @@ router.get('/privacy', function(req, res, next) {
 })
 
 router.get('/devices', function(req, res, next) {
-  res.render('devices')
+  res.redirect("https://devices.ubuntu-touch.io/");
 })
 
 router.get('/api/devices', function(req, res, next) {
@@ -139,7 +139,7 @@ router.get('/api/device/:device', function(req, res, next) {
 })
 
 router.get('/device/:device', function(req, res, next) {
-  getDevice(req.params.device).then(r => res.render('device', { data: r })).catch(() => notFound(res));
+  getDevice(req.params.device).then(r => res.redirect("https://devices.ubuntu-touch.io/device/"+r.device).catch(() => notFound(res)));
 })
 
 router.get('/telegram', function(req, res, next) {
